@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Days of Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="sec">
+        <header>
+            <a href="#"><img src="logo.png" alt="Header Logo" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Twitter Bot</a></li>
+                <li><a href="#">Email Bot</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Let your 100<br/><span>Days of Code</span><br/>Begin</h2>
+                <p>You take the pledge and we help you successfully complete it. 
+                    Whether <br/>you need a code challenge or some motivation, 
+                    we are always there to help.
+                </p>
+                <a href="#">View Bots</a>
+            </div>
+            <div class="imgBox">
+                <img src="python.png" class="python" alt="Python">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="python.png" onclick="imgSlider('python.png');changeBgColor('#0062be')" alt="Python Logo"></li>
+            <li><img src="java.png" onclick="imgSlider('java.png');changeBgColor('#e60c2c')" alt="Java Logo"></li>
+            <li><img src="java.png" onclick="imgSlider('java.png');changeBgColor('#1e1e1e')" alt="C# Logo"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.python').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    
+</body>
+</html>
